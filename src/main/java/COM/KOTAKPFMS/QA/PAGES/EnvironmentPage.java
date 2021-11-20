@@ -23,16 +23,16 @@ public class EnvironmentPage {
 	Logger log = Logger.getLogger(EnvironmentPage.class);
 
 	// WebElements for Environment Page
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps:sodExecutor")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps:sodExecutorc2")
+	WebElement sodStatus;
+	
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps:sodExecutor")
 	WebElement sodcheckbox;
 
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps:sodExecutorc2")
-	WebElement sodStatus;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps:eodExecutorc2")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps:eodExecutorc2")
 	WebElement eodStatus;
 
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps:eodExecutor")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps:eodExecutor")
 	WebElement eodcheckbox;
 
 	@FindBy(id = "modalDialogContinue")
@@ -44,7 +44,7 @@ public class EnvironmentPage {
 	@FindBy(name = "env.run.continue")
 	WebElement returnButton;
 
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps")
 	WebElement bdcheckbox;
 
 	@FindBy(id = "SET_BUSINESS_DATE_ACTION")
@@ -289,261 +289,111 @@ public class EnvironmentPage {
 	WebElement NeftPaymentProcessServercheckbox;
 	
 	// WebElements for ACH Servers
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchPaymentProcessServerc2")
 	WebElement AchPaymentProcessServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchPaymentProcessServer")
 	WebElement AchPaymentProcessServercheckbox;
 	
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchOutputServerc2")
 	WebElement AchOutputServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchOutputServer")
 	WebElement AchOutputServercheckbox;
 	
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchResponseReaderServerc2")
 	WebElement AchResponseReaderServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchResponseReaderServer")
 	WebElement AchResponseReaderServercheckbox;
 	
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchResponseProcessServerc2")
 	WebElement AchResponseProcessServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AchResponseProcessServer")
 	WebElement AchResponseProcessServercheckbox;
 
 	// WebElements for APBS Servers
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsPaymentProcessServerc2")
 	WebElement ApbsPaymentProcessServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsPaymentProcessServer")
 	WebElement ApbsPaymentProcessServercheckbox;
 
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsOutputServerc2")
 	WebElement ApbsOutputServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsOutputServer")
 	WebElement ApbsOutputServercheckbox;
 
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsResponseReaderServerc2")
 	WebElement ApbsResponseReaderServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsResponseReaderServer")
 	WebElement ApbsResponseReaderServercheckbox;
 
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsResponseProcessServerc2")
 	WebElement ApbsResponseProcessServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ApbsResponseProcessServer")
 	WebElement ApbsResponseProcessServercheckbox;
 	
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AadhaarVaultGetReferenceServerc2")
 	WebElement AadhaarVaultGetReferenceServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AadhaarVaultGetReferenceServer")
 	WebElement AadhaarVaultGetReferenceServercheckbox;
 	
-	@FindBy(id = "")
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AadhaarVaultForHistoryPaymentsServerc2")
 	WebElement AadhaarVaultForHistoryPaymentsServerstatus;
 
-	@FindBy(id = "")
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AadhaarVaultForHistoryPaymentsServer")
 	WebElement AadhaarVaultForHistoryPaymentsServercheckbox;
 	
 	// WebElements for AV Servers
-	@FindBy(id = "")
-	WebElement AutoMisServerstatus;
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:CpsmsAVFileRequestServerc2")
+	WebElement CpsmsAVFileRequestServerstatus;
 
-	@FindBy(id = "")
-	WebElement AutoMisServercheckbox;
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:CpsmsAVFileRequestServer")
+	WebElement CpsmsAVFileRequestServercheckbox;
 
-	@FindBy(id = "")
-	WebElement H2HMMSServerstatus;
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:CpsmsAVProcessingServerc2")
+	WebElement CpsmsAVProcessingServerstatus;
 
-	@FindBy(id = "")
-	WebElement H2HMMSServercheckbox;
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:CpsmsAVProcessingServer")
+	WebElement CpsmsAVProcessingServercheckbox;
 
-	@FindBy(id = "")
-	WebElement H2HFileServerRouterstatus;
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AVResponseGenerationServerc2")
+	WebElement AVResponseGenerationServerstatus;
 
-	@FindBy(id = "")
-	WebElement H2HFileServerRoutercheckbox;
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AVResponseGenerationServer")
+	WebElement AVResponseGenerationServercheckbox;
 
-	@FindBy(id = "")
-	WebElement MandateRepresentServerstatus;
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AVAckReadServerc2")
+	WebElement AVAckReadServerstatus;
 
-	@FindBy(id = "")
-	WebElement MandateRepresentServercheckbox;
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:AVAckReadServer")
+	WebElement AVAckReadServercheckbox;
 
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:TransactionRepresentServerc2")
-	WebElement TransactionRepresentServerstatus;
+	// WebElements for SFMS Servers
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:NeftOutputServerc2")
+	WebElement NeftOutputServerstatus;
 
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:TransactionRepresentServer")
-	WebElement TransactionRepresentServercheckbox;
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:NeftOutputServer")
+	WebElement NeftOutputServercheckbox;
 
-	// WebElements for ROUTER Servers
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:GpsFileProgressServerc2")
-	WebElement GpsFileProgressServerstatus;
+	// WebElements for REPORT Servers
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ReportEventProducerServerc2")
+	WebElement ReportEventProducerServer_Reportstatus;
 
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:GpsFileProgressServer")
-	WebElement GpsFileProgressServercheckbox;
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ReportEventProducerServer")
+	WebElement ReportEventProducerServer_Reportcheckbox;
 
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:GpsPaymentProgressServerc2")
-	WebElement GpsPaymentProgressServerstatus;
+	@FindBy(id = "TRin,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ReportGeneratorServerc2")
+	WebElement ReportGeneratorServer_Reportstatus;
 
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:GpsPaymentProgressServer")
-	WebElement GpsPaymentProgressServercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:ChargePostingServerc2")
-	WebElement ChargePostingServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:ChargePostingServer")
-	WebElement ChargePostingServercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:CorporateFundingServerc2")
-	WebElement CorporateFundingServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:CorporateFundingServer")
-	WebElement CorporateFundingServercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:FileMarkCompleteServerc2")
-	WebElement FileMarkCompleteServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:FileMarkCompleteServer")
-	WebElement FileMarkCompleteServercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:FilePostingMarkCompleteServerc2")
-	WebElement FilePostingMarkCompleteServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:FilePostingMarkCompleteServer")
-	WebElement FilePostingMarkCompleteServercheckbox;
-
-	// WebElements for Posting Servers
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Finacle_Posting_Serverc2")
-	WebElement Finacle_Posting_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Finacle_Posting_Server")
-	WebElement Finacle_Posting_Servercheckbox;
-
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:IpaymentReQueueingServerc2")
-	WebElement IpaymentReQueueingServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:IpaymentReQueueingServer")
-	WebElement IpaymentReQueueingServercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Debit_Posting_Serverc2")
-	WebElement Inward_Debit_Posting_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Debit_Posting_Server")
-	WebElement Inward_Debit_Posting_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Credit_Posting_Serverc2")
-	WebElement Inward_Credit_Posting_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Credit_Posting_Server")
-	WebElement Inward_Credit_Posting_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Debit_RePosting_Serverc2")
-	WebElement Inward_Debit_RePosting_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Debit_Posting_Server")
-	WebElement Inward_Debit_RePosting_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Credit_Posting_Serverc2")
-	WebElement Inward_Credit_RePosting_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Credit_RePosting_Server")
-	WebElement Inward_Credit_RePosting_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Debit_ReffralPost_Serverc2")
-	WebElement Inward_Debit_ReffralPost_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Debit_ReffralPost_Server")
-	WebElement Inward_Debit_ReffralPost_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Credit_ReffralPost_Serverc2")
-	WebElement Inward_Credit_ReffralPost_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Inward_Credit_ReffralPost_Server")
-	WebElement Inward_Credit_ReffralPost_Servercheckbox;
-
-	// WebElements for Alert Server Servers
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Mandate_SMS_Alerts_Serverc2")
-	WebElement Mandate_SMS_Alerts_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Mandate_SMS_Alerts_Server")
-	WebElement Mandate_SMS_Alerts_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Mandate_EMAIL_Alerts_Serverc2")
-	WebElement Mandate_EMAIL_Alerts_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Mandate_EMAIL_Alerts_Server")
-	WebElement Mandate_EMAIL_Alerts_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Payment_SMS_Alerts_Serverc2")
-	WebElement Payment_SMS_Alerts_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Payment_SMS_Alerts_Server")
-	WebElement Payment_SMS_Alerts_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Payment_EMAIL_Alerts_Serverc2")
-	WebElement Payment_EMAIL_Alerts_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:Payment_EMAIL_Alerts_Server")
-	WebElement Payment_EMAIL_Alerts_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:PaymentPosting_Alert_Serverc2")
-	WebElement PaymentPosting_Alert_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:PaymentPosting_Alert_Server")
-	WebElement PaymentPosting_Alert_Servercheckbox;
-
-	// WebElements for ESIGN Servers
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:ESIGNMMSInFileServerc2")
-	WebElement ESIGNMMSInFileServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:ESIGNMMSInFileServer")
-	WebElement ESIGNMMSInFileServercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:ESIGNMMSVerificationServerc2")
-	WebElement ESIGNMMSVerificationServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:ESIGNMMSVerificationServer")
-	WebElement ESIGNMMSVerificationServercheckbox;
-
-	// WebElements for MMS API Servers
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:APIMandateValidateServerc2")
-	WebElement APIMandateValidateServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:APIMandateValidateServer")
-	WebElement APIMandateValidateServercheckbox;
-
-	// WebElements for JARVIS Servers
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:JARVISFileProcessServerc2")
-	WebElement JARVISFileProcessServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:JARVISFileProcessServer")
-	WebElement JARVISFileProcessServercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:JARVISFileCreatorServerc2")
-	WebElement JARVISFileCreatorServerstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:JARVISFileCreatorServer")
-	WebElement JARVISFileCreatorServercheckbox;
-
-	// WebElements for PGP Servers
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:NACH_FileEncryption_Serverc2")
-	WebElement NACH_FileEncryption_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:NACH_FileEncryption_Server")
-	WebElement NACH_FileEncryption_Servercheckbox;
-
-	@FindBy(id = "TRin,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:NACH_FileDecryption_Serverc2")
-	WebElement NACH_FileDecryption_Serverstatus;
-
-	@FindBy(id = "in,in/kotak_nach,in/kotak_nach/gps,in/kotak_nach/gps:NACH_FileDecryption_Server")
-	WebElement NACH_FileDecryption_Servercheckbox;
+	@FindBy(id = "in,in/kotak_pfms,in/kotak_pfms/gps,in/kotak_pfms/gps:ReportGeneratorServer")
+	WebElement ReportGeneratorServer_Reportcheckbox;
 
 	// WebElements for Logout function
 	@FindBy(id = "logoutButtonId")
@@ -774,26 +624,70 @@ public class EnvironmentPage {
 			log.error("emailServer is failed to start");
 		}
 	}
+	
+	//-----------Check ReportEventProducerServer Status-----------//
+		public void checkReportEventProducerServer() throws InterruptedException {
+			String statusReportEventProducerServer = ReportEventProducerServerstatus.getText();
+			if (statusReportEventProducerServer.equals("Inactive")) {
+				ReportEventProducerServercheckbox.click();
+				switchResourceButton.click();
+				returnBtnStatus();
+				checkReportEventProducerServer1();
+			} else {
+				log.info("ReportEventProducerServer is already running");
+			}
+		}
 
-	//-----------Check NPCI_Upload_Server Status----------//
-	public void checkNPCI_Upload_Server() throws InterruptedException {
-		String statusNPCI_Upload_Server = NPCI_Upload_Serverstatus.getText();
-		if (statusNPCI_Upload_Server.equals("Inactive")) {
-			NPCI_Upload_Servercheckbox.click();
+		public void checkReportEventProducerServer1() {
+			String statusReportEventProducerServer = ReportEventProducerServerstatus.getText();
+			if (statusReportEventProducerServer.equals("Active")) {
+				log.info("ReportEventProducerServer is started");
+			} else {
+				log.error("ReportEventProducerServer is failed to start");
+			}
+		}
+		
+		//-----------Check ReportGeneratorServer Status-----------//
+				public void checkReportGeneratorServer() throws InterruptedException {
+					String statusReportGeneratorServer = ReportGeneratorServerstatus.getText();
+					if (statusReportGeneratorServer.equals("Inactive")) {
+						ReportGeneratorServercheckbox.click();
+						switchResourceButton.click();
+						returnBtnStatus();
+						checkReportGeneratorServer1();
+					} else {
+						log.info("ReportGeneratorServer is already running");
+					}
+				}
+
+				public void checkReportGeneratorServer1() {
+					String statusReportGeneratorServer = ReportGeneratorServerstatus.getText();
+					if (statusReportGeneratorServer.equals("Active")) {
+						log.info("ReportGeneratorServer is started");
+					} else {
+						log.error("ReportGeneratorServer is failed to start");
+					}
+				}	
+
+	//-----------Check SFTPDownloadServer Status----------//
+	public void checkSFTPDownloadServer() throws InterruptedException {
+		String statusSFTPDownloadServer = SFTPDownloadServerstatus.getText();
+		if (statusSFTPDownloadServer.equals("Inactive")) {
+			SFTPDownloadServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkNPCI_Upload_Server1();
+			checkSFTPDownloadServer1();
 		} else {
-			log.info("NPCI_Upload_Server is already running");
+			log.info("SFTPDownloadServer is already running");
 		}
 	}
 
-	public void checkNPCI_Upload_Server1() {
-		String statusNPCI_Upload_Server = NPCI_Upload_Serverstatus.getText();
-		if (statusNPCI_Upload_Server.equals("Active")) {
-			log.info("NPCI_Upload_Server is started");
+	public void checkSFTPDownloadServer1() {
+		String statusSFTPDownloadServer = SFTPDownloadServerstatus.getText();
+		if (statusSFTPDownloadServer.equals("Active")) {
+			log.info("SFTPDownloadServer is started");
 		} else {
-			log.error("NPCI_Upload_Server is failed to start");
+			log.error("SFTPDownloadServer is failed to start");
 		}
 	}
 
