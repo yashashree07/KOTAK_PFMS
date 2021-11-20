@@ -680,7 +680,7 @@ public class EnvironmentPage {
 		} else {
 			log.info("SFTPDownloadServer is already running");
 		}
-	}
+	}	
 
 	public void checkSFTPDownloadServer1() {
 		String statusSFTPDownloadServer = SFTPDownloadServerstatus.getText();
@@ -691,641 +691,641 @@ public class EnvironmentPage {
 		}
 	}
 
-	//-----------Check NPCI_Download_Server Status-----------//
-	public void checkNPCI_Download_Server() throws InterruptedException {
-		String statusNPCI_Download_Server = NPCI_Download_Serverstatus.getText();
-		if (statusNPCI_Download_Server.equals("Inactive")) {
-			NPCI_Download_Servercheckbox.click();
+	//-----------Check SFTPUploadServer Status-----------//
+	public void checkSFTPUploadServer() throws InterruptedException {
+		String statusSFTPUploadServer = SFTPUploadServerstatus.getText();
+		if (statusSFTPUploadServer.equals("Inactive")) {
+			SFTPUploadServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkNPCI_Download_Server1();
+			checkSFTPUploadServer1();
 		} else {
-			log.info("NPCI_Download_Server is already running");
+			log.info("SFTPUploadServer is already running");
 		}
 	}
 
-	public void checkNPCI_Download_Server1() {
-		String statusNPCI_Download_Server = NPCI_Download_Serverstatus.getText();
-		if (statusNPCI_Download_Server.equals("Active")) {
-			log.info("NPCI_Download_Server is started");
+	public void checkSFTPUploadServer1() {
+		String statusSFTPUploadServer = SFTPUploadServerstatus.getText();
+		if (statusSFTPUploadServer.equals("Active")) {
+			log.info("SFTPUploadServer is started");
 		} else {
-			log.error("NPCI_Download_Server is failed to start");
+			log.error("SFTPUploadServer is failed to start");
 		}
 	}
 
-	//-----------Check File_Router_Server Status-------------//
-	public void checkFile_Router_Server() throws InterruptedException {
-		String statusFile_Router_Server = File_Router_Serverstatus.getText();
-		if (statusFile_Router_Server.equals("Inactive")) {
-			File_Router_Servercheckbox.click();
+	//-----------Check FileReadServer Status-------------//
+	public void checkFileReadServer() throws InterruptedException {
+		String statusFileReadServer = FileReadServerstatus.getText();
+		if (statusFileReadServer.equals("Inactive")) {
+			FileReadServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkFile_Router_Server1();
+			checkFileReadServer1();
 		} else {
-			log.info("File_Router_Server is already running");
+			log.info("FileReadServer is already running");
 		}
 	}
 
-	public void checkFile_Router_Server1() {
-		String statusFile_Router_Server = File_Router_Serverstatus.getText();
-		if (statusFile_Router_Server.equals("Active")) {
-			log.info("File_Router_Server is started");
+	public void checkFileReadServer1() {
+		String statusFileReadServer = FileReadServerstatus.getText();
+		if (statusFileReadServer.equals("Active")) {
+			log.info("FileReadServer is started");
 		} else {
-			log.error("File_Router_Server is failed to start");
+			log.error("FileReadServer is failed to start");
 		}
 	}
 
-	//------------Check MMS_InFile_Server Status------------//
-	public void checkMMS_InFile_Server() throws InterruptedException {
-		String statusMMS_InFile_Server = MMS_InFile_Serverstatus.getText();
-		if (statusMMS_InFile_Server.equals("Inactive")) {
-			MMS_InFile_Servercheckbox.click();
+	//------------Check FileValidateServer Status------------//
+	public void checkFileValidateServer() throws InterruptedException {
+		String statusFileValidateServer = FileValidateServerstatus.getText();
+		if (statusFileValidateServer.equals("Inactive")) {
+			FileValidateServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkMMS_InFile_Server1();
+			checkFileValidateServer1();
 		} else {
-			log.info("MMS_InFile_Server is already running");
+			log.info("FileValidateServer is already running");
 		}
 	}
 
-	public void checkMMS_InFile_Server1() {
-		String statusMMS_InFile_Server = MMS_InFile_Serverstatus.getText();
-		if (statusMMS_InFile_Server.equals("Active")) {
-			log.info("MMS_InFile_Server is started");
+	public void checkFileValidateServer1() {
+		String statusFileValidateServer = FileValidateServerstatus.getText();
+		if (statusFileValidateServer.equals("Active")) {
+			log.info("FileValidateServer is started");
 		} else {
-			log.error("MMS_InFile_Server is failed to start");
+			log.error("FileValidateServer is failed to start");
 		}
 	}
 
-	//----------Check MMS_InProcess_Server Status-----------//
-	public void checkMMS_InProcess_Server() throws InterruptedException {
-		String statusMMS_InProcess_Server = MMS_InProcess_Serverstatus.getText();
-		if (statusMMS_InProcess_Server.equals("Inactive")) {
-			MMS_InProcess_Servercheckbox.click();
+	//----------Check PfmsBatchQueueServer Status-----------//
+	public void checkPfmsBatchQueueServer() throws InterruptedException {
+		String statusPfmsBatchQueueServer = PfmsBatchQueueServerstatus.getText();
+		if (statusPfmsBatchQueueServer.equals("Inactive")) {
+			PfmsBatchQueueServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkMMS_InProcess_Server1();
+			checkPfmsBatchQueueServer1();
 		} else {
-			log.info("MMS_InProcess_Server is already running");
+			log.info("PfmsBatchQueueServer is already running");
 		}
 	}
 
-	public void checkMMS_InProcess_Server1() {
-		String statusMMS_InProcess_Server = MMS_InProcess_Serverstatus.getText();
-		if (statusMMS_InProcess_Server.equals("Active")) {
-			log.info("MMS_InProcess_Server is started");
+	public void checkPfmsBatchQueueServer1() {
+		String statusPfmsBatchQueueServer = PfmsBatchQueueServerstatus.getText();
+		if (statusPfmsBatchQueueServer.equals("Active")) {
+			log.info("PfmsBatchQueueServer is started");
 		} else {
-			log.error("MMS_InProcess_Server is failed to start");
+			log.error("PfmsBatchQueueServer is failed to start");
 		}
 	}
 
-	//----------Check MMS_OutFileCreate_Server Status-----------//
-	public void checkMMS_OutFileCreate_Server() throws InterruptedException {
-		String statusMMS_OutFileCreate_Server = MMS_OutFileCreate_Serverstatus.getText();
-		if (statusMMS_OutFileCreate_Server.equals("Inactive")) {
-			MMS_OutFileCreate_Servercheckbox.click();
+	//----------Check MainFilePayCreationServer Status-----------//
+	public void checkMainFilePayCreationServer() throws InterruptedException {
+		String statusMainFilePayCreationServer = MainFilePayCreationServerstatus.getText();
+		if (statusMainFilePayCreationServer.equals("Inactive")) {
+			MainFilePayCreationServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkMMS_OutFileCreate_Server1();
+			checkMainFilePayCreationServer1();
 		} else {
-			log.info("MMS_OutFileCreate_Server is already running");
+			log.info("MainFilePayCreationServer is already running");
 		}
 	}
 
-	public void checkMMS_OutFileCreate_Server1() {
-		String statusMMS_OutFileCreate_Server = MMS_OutFileCreate_Serverstatus.getText();
-		if (statusMMS_OutFileCreate_Server.equals("Active")) {
-			log.info("MMS_OutFileCreate_Server is started");
+	public void checkMainFilePayCreationServer1() {
+		String statusMainFilePayCreationServer = MainFilePayCreationServerstatus.getText();
+		if (statusMainFilePayCreationServer.equals("Active")) {
+			log.info("MainFilePayCreationServer is started");
 		} else {
-			log.error("MMS_OutFileCreate_Server is failed to start");
+			log.error("MainFilePayCreationServer is failed to start");
 		}
 	}
 
-	//-------------Check DBTL_InFile_Server Status------------//
-	public void checkDBTL_InFile_Server() throws InterruptedException {
-		String statusDBTL_InFile_Server = DBTL_InFile_Serverstatus.getText();
-		if (statusDBTL_InFile_Server.equals("Inactive")) {
-			DBTL_InFile_Servercheckbox.click();
+	//-------------Check FutureRolloverServer Status------------//
+	public void checkFutureRolloverServer() throws InterruptedException {
+		String statusFutureRolloverServer = FutureRolloverServerstatus.getText();
+		if (statusFutureRolloverServer.equals("Inactive")) {
+			FutureRolloverServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkDBTL_InFile_Server1();
+			checkFutureRolloverServer1();
 		} else {
-			log.info("DBTL_InFile_Server is already running");
+			log.info("FutureRolloverServer is already running");
 		}
 	}
 
-	public void checkDBTL_InFile_Server1() {
-		String statusDBTL_InFile_Server = DBTL_InFile_Serverstatus.getText();
-		if (statusDBTL_InFile_Server.equals("Active")) {
-			log.info("DBTL_InFile_Server is started");
+	public void checkFutureRolloverServer1() {
+		String statusFutureRolloverServer = FutureRolloverServerstatus.getText();
+		if (statusFutureRolloverServer.equals("Active")) {
+			log.info("FutureRolloverServer is started");
 		} else {
-			log.error("DBTL_InFile_Server is failed to start");
+			log.error("FutureRolloverServer is failed to start");
 		}
 	}
 
-	//------------Check DBTL_InProcess_Server Status---------------//
-	public void checkDBTL_InProcess_Server() throws InterruptedException {
-		String statusDBTL_InProcess_Server = DBTL_InProcess_Serverstatus.getText();
-		if (statusDBTL_InProcess_Server.equals("Inactive")) {
-			DBTL_InProcess_Servercheckbox.click();
+	//------------Check FileExpiryServer Status---------------//
+	public void checkFileExpiryServer() throws InterruptedException {
+		String statusFileExpiryServer = FileExpiryServerstatus.getText();
+		if (statusFileExpiryServer.equals("Inactive")) {
+			FileExpiryServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkDBTL_InProcess_Server1();
+			checkFileExpiryServer1();
 		} else {
-			log.info("DBTL_InProcess_Server is already running");
+			log.info("FileExpiryServer is already running");
 		}
 	}
 
-	public void checkDBTL_InProcess_Server1() {
-		String statusDBTL_InProcess_Server = DBTL_InProcess_Serverstatus.getText();
-		if (statusDBTL_InProcess_Server.equals("Active")) {
-			log.info("DBTL_InProcess_Server is started");
+	public void checkFileExpiryServer1() {
+		String statusFileExpiryServer = FileExpiryServerstatus.getText();
+		if (statusFileExpiryServer.equals("Active")) {
+			log.info("FileExpiryServer is started");
 		} else {
-			log.error("DBTL_InProcess_Server is failed to start");
+			log.error("FileExpiryServer is failed to start");
 		}
 	}
 
-	//------------Check DBTL_Verification_Server Status--------------//
-	public void checkDBTL_Verification_Server() throws InterruptedException {
-		String statusDBTL_Verification_Server = DBTL_Verification_Serverstatus.getText();
-		if (statusDBTL_Verification_Server.equals("Inactive")) {
-			DBTL_Verification_Servercheckbox.click();
+	//------------Check FileEnrolmentMatcherServer Status--------------//
+	public void checkFileEnrolmentMatcherServer() throws InterruptedException {
+		String statusFileEnrolmentMatcherServer = FileEnrolmentMatcherServerstatus.getText();
+		if (statusFileEnrolmentMatcherServer.equals("Inactive")) {
+			FileEnrolmentMatcherServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkDBTL_Verification_Server1();
+			checkFileEnrolmentMatcherServer1();
 		} else {
-			log.info("DBTL_Verification_Server is already running");
+			log.info("FileEnrolmentMatcherServer is already running");
 		}
 	}
 
-	public void checkDBTL_Verification_Server1() {
-		String statusDBTL_Verification_Server = DBTL_Verification_Serverstatus.getText();
-		if (statusDBTL_Verification_Server.equals("Active")) {
-			log.info("DBTL_Verification_Server is started");
+	public void checkFileEnrolmentMatcherServer1() {
+		String statusFileEnrolmentMatcherServer = FileEnrolmentMatcherServerstatus.getText();
+		if (statusFileEnrolmentMatcherServer.equals("Active")) {
+			log.info("FileEnrolmentMatcherServer is started");
 		} else {
-			log.error("DBTL_Verification_Server is failed to start");
+			log.error("FileEnrolmentMatcherServer is failed to start");
 		}
 	}
 
-	//---------Check DBTL_OutFileCreate_Server Status----------//
-	public void checkDBTL_OutFileCreate_Server() throws InterruptedException {
-		String statusDBTL_OutFileCreate_Server = DBTL_OutFileCreate_Serverstatus.getText();
-		if (statusDBTL_OutFileCreate_Server.equals("Inactive")) {
-			DBTL_OutFileCreate_Servercheckbox.click();
+	//---------Check DscEnrollementServer Status----------//
+	public void checkDscEnrollementServer() throws InterruptedException {
+		String statusDscEnrollementServer = DscEnrollementServerstatus.getText();
+		if (statusDscEnrollementServer.equals("Inactive")) {
+			DscEnrollementServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkDBTL_OutFileCreate_Server1();
+			checkDscEnrollementServer1();
 		} else {
-			log.info("DBTL_OutFileCreate_Server is already running");
+			log.info("DscEnrollementServer is already running");
 		}
 	}
 
-	public void checkDBTL_OutFileCreate_Server1() {
-		String statusDBTL_OutFileCreate_Server = DBTL_OutFileCreate_Serverstatus.getText();
-		if (statusDBTL_OutFileCreate_Server.equals("Active")) {
-			log.info("DBTL_OutFileCreate_Server is started");
+	public void checkDscEnrollementServer1() {
+		String statusDscEnrollementServer = DscEnrollementServerstatus.getText();
+		if (statusDscEnrollementServer.equals("Active")) {
+			log.info("DscEnrollementServer is started");
 		} else {
-			log.error("DBTL_OutFileCreate_Server is failed to start");
+			log.error("DscEnrollementServer is failed to start");
 		}
 	}
 
-	//-----------Check CBDT_InFile_Server Status------------//
-	public void checkCBDT_InFile_Server() throws InterruptedException {
-		String statusCBDT_InFile_Server = CBDT_InFile_Serverstatus.getText();
-		if (statusCBDT_InFile_Server.equals("Inactive")) {
-			CBDT_InFile_Servercheckbox.click();
+	//-----------Check GpsReQueueingServer Status------------//
+	public void checkGpsReQueueingServer() throws InterruptedException {
+		String statusGpsReQueueingServer = GpsReQueueingServerstatus.getText();
+		if (statusGpsReQueueingServer.equals("Inactive")) {
+			GpsReQueueingServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkCBDT_InFile_Server1();
+			checkGpsReQueueingServer1();
 		} else {
-			log.info("CBDT_InFile_Server is already running");
+			log.info("GpsReQueueingServer is already running");
 		}
 	}
 
-	public void checkCBDT_InFile_Server1() {
-		String statusCBDT_InFile_Server = CBDT_InFile_Serverstatus.getText();
-		if (statusCBDT_InFile_Server.equals("Active")) {
-			log.info("CBDT_InFile_Server is started");
+	public void checkGpsReQueueingServer1() {
+		String statusGpsReQueueingServer = GpsReQueueingServerstatus.getText();
+		if (statusGpsReQueueingServer.equals("Active")) {
+			log.info("GpsReQueueingServer is started");
 		} else {
-			log.error("CBDT_InFile_Server is failed to start");
+			log.error("GpsReQueueingServer is failed to start");
 		}
 	}
 
-	//----------Check CBDT_InProcess_Server Status----------//
-	public void checkCBDT_InProcess_Server() throws InterruptedException {
-		String statusCBDT_InProcess_Server = CBDT_InProcess_Serverstatus.getText();
-		if (statusCBDT_InProcess_Server.equals("Inactive")) {
-			CBDT_InProcess_Servercheckbox.click();
+	//----------Check InitAckProducerServer Status----------//
+	public void checkInitAckProducerServer() throws InterruptedException {
+		String statusInitAckProducerServer = InitAckProducerServerstatus.getText();
+		if (statusInitAckProducerServer.equals("Inactive")) {
+			InitAckProducerServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkCBDT_InProcess_Server1();
+			checkInitAckProducerServer1();
 		} else {
-			log.info("CBDT_InProcess_Server is already running");
+			log.info("InitAckProducerServer is already running");
 		}
 	}
 
-	public void checkCBDT_InProcess_Server1() {
-		String statusCBDT_InProcess_Server = CBDT_InProcess_Serverstatus.getText();
-		if (statusCBDT_InProcess_Server.equals("Active")) {
-			log.info("CBDT_InProcess_Server is started");
+	public void checkInitAckProducerServer1() {
+		String statusInitAckProducerServer = InitAckProducerServerstatus.getText();
+		if (statusInitAckProducerServer.equals("Active")) {
+			log.info("InitAckProducerServer is started");
 		} else {
-			log.error("CBDT_InProcess_Server is failed to start");
+			log.error("InitAckProducerServer is failed to start");
 		}
 	}
 
-	//-----------Check CBDT_AccountVerification_Server Status---------------//
-	public void checkCBDT_AccountVerification_Server() throws InterruptedException {
-		String statusCBDT_AccountVerification_Server = CBDT_AccountVerification_Serverstatus.getText();
-		if (statusCBDT_AccountVerification_Server.equals("Inactive")) {
-			CBDT_AccountVerification_Servercheckbox.click();
+	//-----------Check FileStatusUpdateServer Status---------------//
+	public void checkFileStatusUpdateServer() throws InterruptedException {
+		String statusFileStatusUpdateServer = FileStatusUpdateServerstatus.getText();
+		if (statusFileStatusUpdateServer.equals("Inactive")) {
+			FileStatusUpdateServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkCBDT_AccountVerification_Server1();
+			checkFileStatusUpdateServer1();
 		} else {
-			log.info("CBDT_AccountVerification_Server is already running");
+			log.info("FileStatusUpdateServer is already running");
 		}
 	}
 
-	public void checkCBDT_AccountVerification_Server1() {
-		String statusCBDT_AccountVerification_Server = CBDT_AccountVerification_Serverstatus.getText();
-		if (statusCBDT_AccountVerification_Server.equals("Active")) {
-			log.info("CBDT_AccountVerification_Server is started");
+	public void checkFileStatusUpdateServer1() {
+		String statusFileStatusUpdateServer = FileStatusUpdateServerstatus.getText();
+		if (statusFileStatusUpdateServer.equals("Active")) {
+			log.info("FileStatusUpdateServer is started");
 		} else {
-			log.error("CBDT_AccountVerification_Server is failed to start");
+			log.error("FileStatusUpdateServer is failed to start");
 		}
 	}
 
-	//---------Check CBDT_OutFileCreate_Server Status----------//
-	public void checkCBDT_OutFileCreate_Server() throws InterruptedException {
-		String statusCBDT_OutFileCreate_Server = CBDT_OutFileCreate_Serverstatus.getText();
-		if (statusCBDT_OutFileCreate_Server.equals("Inactive")) {
-			CBDT_OutFileCreate_Servercheckbox.click();
+	//---------Check DISCExpiryAlertServer Status----------//
+	public void checkDISCExpiryAlertServer() throws InterruptedException {
+		String statusDISCExpiryAlertServer = DISCExpiryAlertServerstatus.getText();
+		if (statusDISCExpiryAlertServer.equals("Inactive")) {
+			DISCExpiryAlertServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkCBDT_OutFileCreate_Server1();
+			checkDISCExpiryAlertServer1();
 		} else {
-			log.info("CBDT_OutFileCreate_Server is already running");
+			log.info("DISCExpiryAlertServer is already running");
 		}
 	}
 
-	public void checkCBDT_OutFileCreate_Server1() {
-		String statusCBDT_OutFileCreate_Server = CBDT_OutFileCreate_Serverstatus.getText();
-		if (statusCBDT_OutFileCreate_Server.equals("Active")) {
-			log.info("CBDT_OutFileCreate_Server is started");
+	public void checkDISCExpiryAlertServer1() {
+		String statusDISCExpiryAlertServer = DISCExpiryAlertServerstatus.getText();
+		if (statusDISCExpiryAlertServer.equals("Active")) {
+			log.info("DISCExpiryAlertServer is started");
 		} else {
-			log.error("CBDT_OutFileCreate_Server is failed to start");
+			log.error("DISCExpiryAlertServer is failed to start");
 		}
 	}
 
-	//----------Check NACH_InFile_Server Status---------//
-	public void checkNACH_InFile_Server() throws InterruptedException {
-		String statusNACH_InFile_Server = NACH_InFile_Serverstatus.getText();
-		if (statusNACH_InFile_Server.equals("Inactive")) {
-			NACH_InFile_Servercheckbox.click();
+	//----------Check ReceiptAckServer Status---------//
+	public void checkReceiptAckServer() throws InterruptedException {
+		String statusReceiptAckServer = ReceiptAckServerstatus.getText();
+		if (statusReceiptAckServer.equals("Inactive")) {
+			ReceiptAckServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkNACH_InFile_Server1();
+			checkReceiptAckServer1();
 		} else {
-			log.info("NACH_InFile_Server is already running");
+			log.info("ReceiptAckServer is already running");
 		}
 	}
 
-	public void checkNACH_InFile_Server1() {
-		String statusNACH_InFile_Server = NACH_InFile_Serverstatus.getText();
-		if (statusNACH_InFile_Server.equals("Active")) {
-			log.info("NACH_InFile_Server is started");
+	public void checkReceiptAckServer1() {
+		String statusReceiptAckServer = ReceiptAckServerstatus.getText();
+		if (statusReceiptAckServer.equals("Active")) {
+			log.info("ReceiptAckServer is started");
 		} else {
-			log.error("NACH_InFile_Server is failed to start");
+			log.error("ReceiptAckServer is failed to start");
 		}
 	}
 
-	//----------Check NACH_InProcess_Server Status-------------//
-	public void checkNACH_InProcess_Server() throws InterruptedException {
-		String statusNACH_InProcess_Server = NACH_InProcess_Serverstatus.getText();
-		if (statusNACH_InProcess_Server.equals("Inactive")) {
-			NACH_InProcess_Servercheckbox.click();
+	//----------Check InitAckConsumerServer Status-------------//
+	public void checkInitAckConsumerServer() throws InterruptedException {
+		String statusInitAckConsumerServer = InitAckConsumerServerstatus.getText();
+		if (statusInitAckConsumerServer.equals("Inactive")) {
+			InitAckConsumerServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkNACH_InProcess_Server1();
+			checkInitAckConsumerServer1();
 		} else {
-			log.info("NACH_InProcess_Server is already running");
+			log.info("InitAckConsumerServer is already running");
 		}
 	}
 
-	public void checkNACH_InProcess_Server1() {
-		String statusNACH_InProcess_Server = NACH_InProcess_Serverstatus.getText();
-		if (statusNACH_InProcess_Server.equals("Active")) {
-			log.info("NACH_InProcess_Server is started");
+	public void checkInitAckConsumerServer1() {
+		String statusInitAckConsumerServer = InitAckConsumerServerstatus.getText();
+		if (statusInitAckConsumerServer.equals("Active")) {
+			log.info("InitAckConsumerServer is started");
 		} else {
-			log.error("NACH_InProcess_Server is failed to start");
+			log.error("InitAckConsumerServer is failed to start");
 		}
 	}
 
-	//---------Check NACH_OutProcess_Server Status----------//
-	public void checkNACH_OutProcess_Server() throws InterruptedException {
-		String statusNACH_OutProcess_Server = NACH_OutProcess_Serverstatus.getText();
-		if (statusNACH_OutProcess_Server.equals("Inactive")) {
-			NACH_OutProcess_Servercheckbox.click();
+	//---------Check SuccAckServer Status----------//
+	public void checkSuccAckServer() throws InterruptedException {
+		String statusSuccAckServer = SuccAckServerstatus.getText();
+		if (statusSuccAckServer.equals("Inactive")) {
+			SuccAckServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkNACH_OutProcess_Server1();
+			checkSuccAckServer1();
 		} else {
-			log.info("NACH_OutProcess_Server is already running");
+			log.info("SuccAckServer is already running");
 		}
 	}
 
-	public void checkNACH_OutProcess_Server1() {
-		String statusNACH_OutProcess_Server = NACH_OutProcess_Serverstatus.getText();
-		if (statusNACH_OutProcess_Server.equals("Active")) {
-			log.info("NACH_OutProcess_Server is started");
+	public void checkSuccAckServer1() {
+		String statusSuccAckServer = SuccAckServerstatus.getText();
+		if (statusSuccAckServer.equals("Active")) {
+			log.info("SuccAckServer is started");
 		} else {
-			log.error("NACH_OutProcess_Server is failed to start");
+			log.error("SuccAckServer is failed to start");
 		}
 	}
 
-	//----------Check NACH_OutFileCreate_Server Status-----------//
-	public void checkNACH_OutFileCreate_Server() throws InterruptedException {
-		String statusNACH_OutFileCreate_Server = NACH_OutFileCreate_Serverstatus.getText();
-		if (statusNACH_OutFileCreate_Server.equals("Inactive")) {
-			NACH_OutFileCreate_Servercheckbox.click();
+	//----------Check RejectAckServer Status-----------//
+	public void checkRejectAckServer() throws InterruptedException {
+		String statusRejectAckServer = RejectAckServerstatus.getText();
+		if (statusRejectAckServer.equals("Inactive")) {
+			RejectAckServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkNACH_OutFileCreate_Server1();
+			checkRejectAckServer1();
 		} else {
-			log.info("NACH_OutFileCreate_Server is already running");
+			log.info("RejectAckServer is already running");
 		}
 	}
 
-	public void checkNACH_OutFileCreate_Server1() {
-		String statusNACH_OutFileCreate_Server = NACH_OutFileCreate_Serverstatus.getText();
-		if (statusNACH_OutFileCreate_Server.equals("Active")) {
-			log.info("NACH_OutFileCreate_Server is started");
+	public void checkRejectAckServer1() {
+		String statusRejectAckServer = RejectAckServerstatus.getText();
+		if (statusRejectAckServer.equals("Active")) {
+			log.info("RejectAckServer is started");
 		} else {
-			log.error("NACH_OutFileCreate_Server is failed to start");
+			log.error("RejectAckServer is failed to start");
 		}
 	}
 
-	//----------Check Corporate_InFile_Server Status----------//
-	public void checkCorporate_InFile_Server() throws InterruptedException {
-		String statusCorporate_InFile_Server = Corporate_InFile_Serverstatus.getText();
-		if (statusCorporate_InFile_Server.equals("Inactive")) {
-			Corporate_InFile_Servercheckbox.click();
+	//----------Check MainPostingServer Status----------//
+	public void checkMainPostingServer() throws InterruptedException {
+		String statusMainPostingServer = MainPostingServerstatus.getText();
+		if (statusMainPostingServer.equals("Inactive")) {
+			MainPostingServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkCorporate_InFile_Server1();
+			checkMainPostingServer1();
 		} else {
-			log.info("Corporate_InFile_Server is already running");
+			log.info("MainPostingServer is already running");
 		}
 	}
 
-	public void checkCorporate_InFile_Server1() {
-		String statusCorporate_InFile_Server = Corporate_InFile_Serverstatus.getText();
-		if (statusCorporate_InFile_Server.equals("Active")) {
-			log.info("Corporate_InFile_Server is started");
+	public void checkMainPostingServer1() {
+		String statusMainPostingServer = MainPostingServerstatus.getText();
+		if (statusMainPostingServer.equals("Active")) {
+			log.info("MainPostingServer is started");
 		} else {
-			log.error("Corporate_InFile_Server is failed to start");
+			log.error("MainPostingServer is failed to start");
 		}
 	}
 
-	//------------Check Corporate_InProcess_Server Status---------//
-	public void checkCorporate_InProcess_Server() throws InterruptedException {
-		String statusCorporate_InProcess_Server = Corporate_InProcess_Serverstatus.getText();
-		if (statusCorporate_InProcess_Server.equals("Inactive")) {
-			Corporate_InProcess_Servercheckbox.click();
+	//------------Check DupRevPostingServer Status---------//
+	public void checkDupRevPostingServer() throws InterruptedException {
+		String statusDupRevPostingServer = DupRevPostingServerstatus.getText();
+		if (statusDupRevPostingServer.equals("Inactive")) {
+			DupRevPostingServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkCorporate_InProcess_Server1();
+			checkDupRevPostingServer1();
 		} else {
-			log.info("Corporate_InProcess_Server is already running");
+			log.info("DupRevPostingServer is already running");
 		}
 	}
 
-	public void checkCorporate_InProcess_Server1() {
-		String statusCorporate_InProcess_Server = Corporate_InProcess_Serverstatus.getText();
-		if (statusCorporate_InProcess_Server.equals("Active")) {
-			log.info("Corporate_InProcess_Server is started");
+	public void checkDupRevPostingServer1() {
+		String statusDupRevPostingServer = DupRevPostingServerstatus.getText();
+		if (statusDupRevPostingServer.equals("Active")) {
+			log.info("DupRevPostingServer is started");
 		} else {
-			log.error("Corporate_InProcess_Server is failed to start");
+			log.error("DupRevPostingServer is failed to start");
 		}
 	}
 
-	//-----------Check LIC_INFile_Server Status----------//
-	public void checkLIC_INFile_Server() throws InterruptedException {
-		String statusLIC_INFile_Server = LIC_INFile_Serverstatus.getText();
-		if (statusLIC_INFile_Server.equals("Inactive")) {
-			LIC_INFile_Servercheckbox.click();
+	//-----------Check PoolToSettBatchPostingServer Status----------//
+	public void checkPoolToSettBatchPostingServer() throws InterruptedException {
+		String statusPoolToSettBatchPostingServer = PoolToSettBatchPostingServerstatus.getText();
+		if (statusPoolToSettBatchPostingServer.equals("Inactive")) {
+			PoolToSettBatchPostingServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkLIC_INFile_Server1();
+			checkPoolToSettBatchPostingServer1();
 		} else {
-			log.info("LIC_INFile_Server is already running");
+			log.info("PoolToSettBatchPostingServer is already running");
 		}
 	}
 
-	public void checkLIC_INFile_Server1() {
-		String statusLIC_INFile_Server = LIC_INFile_Serverstatus.getText();
-		if (statusLIC_INFile_Server.equals("Active")) {
-			log.info("LIC_INFile_Server is started");
+	public void checkPoolToSettBatchPostingServer1() {
+		String statusPoolToSettBatchPostingServer = PoolToSettBatchPostingServerstatus.getText();
+		if (statusPoolToSettBatchPostingServer.equals("Active")) {
+			log.info("PoolToSettBatchPostingServer is started");
 		} else {
-			log.error("LIC_INFile_Server is failed to start");
+			log.error("PoolToSettBatchPostingServer is failed to start");
 		}
 	}
 
-	//------------Check SCHM_Segrigate_Server Status---------//
-	public void checkSCHM_Segrigate_Server() throws InterruptedException {
-		String statusSCHM_Segrigate_Server = SCHM_Segrigate_Serverstatus.getText();
-		if (statusSCHM_Segrigate_Server.equals("Inactive")) {
-			SCHM_Segrigate_Servercheckbox.click();
+	//------------Check PoolToAgencyBatchPostingServer Status---------//
+	public void checkPoolToAgencyBatchPostingServer() throws InterruptedException {
+		String statusPoolToAgencyBatchPostingServer = PoolToAgencyBatchPostingServerstatus.getText();
+		if (statusPoolToAgencyBatchPostingServer.equals("Inactive")) {
+			PoolToAgencyBatchPostingServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkSCHM_Segrigate_Server1();
+			checkPoolToAgencyBatchPostingServer1();
 		} else {
-			log.info("SCHM_Segrigate_Server is already running");
+			log.info("PoolToAgencyBatchPostingServer is already running");
 		}
 	}
 
-	public void checkSCHM_Segrigate_Server1() {
-		String statusSCHM_Segrigate_Server = SCHM_Segrigate_Serverstatus.getText();
-		if (statusSCHM_Segrigate_Server.equals("Active")) {
-			log.info("SCHM_Segrigate_Server is started");
+	public void checkPoolToAgencyBatchPostingServer1() {
+		String statusPoolToAgencyBatchPostingServer = PoolToAgencyBatchPostingServerstatus.getText();
+		if (statusPoolToAgencyBatchPostingServer.equals("Active")) {
+			log.info("PoolToAgencyBatchPostingServer is started");
 		} else {
-			log.error("SCHM_Segrigate_Server is failed to start");
+			log.error("PoolToAgencyBatchPostingServer is failed to start");
 		}
 	}
 
-	//-------------Check AutoMisServer Status--------------//
-	public void checkAutoMisServer() throws InterruptedException {
-		String statusAutoMisServer = AutoMisServerstatus.getText();
-		if (statusAutoMisServer.equals("Inactive")) {
-			AutoMisServercheckbox.click();
+	//-------------Check SettToPoolBatchPostingServer Status--------------//
+	public void checkSettToPoolBatchPostingServer() throws InterruptedException {
+		String statusSettToPoolBatchPostingServer = SettToPoolBatchPostingServerstatus.getText();
+		if (statusSettToPoolBatchPostingServer.equals("Inactive")) {
+			SettToPoolBatchPostingServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkAutoMisServer1();
+			checkSettToPoolBatchPostingServer1();
 		} else {
-			log.info("AutoMisServer is already running");
+			log.info("SettToPoolBatchPostingServer is already running");
 		}
 	}
 
-	public void checkAutoMisServer1() {
-		String statusAutoMisServer = AutoMisServerstatus.getText();
-		if (statusAutoMisServer.equals("Active")) {
-			log.info("AutoMisServer is started");
+	public void checkSettToPoolBatchPostingServer1() {
+		String statusSettToPoolBatchPostingServer = SettToPoolBatchPostingServerstatus.getText();
+		if (statusSettToPoolBatchPostingServer.equals("Active")) {
+			log.info("SettToPoolBatchPostingServer is started");
 		} else {
-			log.error("AutoMisServer is failed to start");
+			log.error("SettToPoolBatchPostingServer is failed to start");
 		}
 	}
 
-	//---------Check H2HMMSServer Status----------//
-	public void checkH2HMMSServer() throws InterruptedException {
-		String statusH2HMMSServer = H2HMMSServerstatus.getText();
-		if (statusH2HMMSServer.equals("Inactive")) {
-			H2HMMSServercheckbox.click();
+	//---------Check OnUsPaymentProcessServer Status----------//
+	public void checkOnUsPaymentProcessServer() throws InterruptedException {
+		String statusOnUsPaymentProcessServer = OnUsPaymentProcessServerstatus.getText();
+		if (statusOnUsPaymentProcessServer.equals("Inactive")) {
+			OnUsPaymentProcessServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkH2HMMSServer1();
+			checkOnUsPaymentProcessServer1();
 		} else {
-			log.info("H2HMMSServer is already running");
+			log.info("OnUsPaymentProcessServer is already running");
 		}
 	}
 
-	public void checkH2HMMSServer1() {
-		String statusH2HMMSServer = H2HMMSServerstatus.getText();
-		if (statusH2HMMSServer.equals("Active")) {
-			log.info("H2HMMSServer is started");
+	public void checkOnUsPaymentProcessServer1() {
+		String statusOnUsPaymentProcessServer = OnUsPaymentProcessServerstatus.getText();
+		if (statusOnUsPaymentProcessServer.equals("Active")) {
+			log.info("OnUsPaymentProcessServer is started");
 		} else {
-			log.error("H2HMMSServer is failed to start");
+			log.error("OnUsPaymentProcessServer is failed to start");
 		}
 	}
 
-	//----------Check H2HFileServerRouter Status-----------//
-	public void checkH2HFileServerRouter() throws InterruptedException {
-		String statusH2HFileServerRouter = H2HFileServerRouterstatus.getText();
-		if (statusH2HFileServerRouter.equals("Inactive")) {
-			H2HFileServerRoutercheckbox.click();
+	//----------Check OnusPostingServer Status-----------//
+	public void checkOnusPostingServer() throws InterruptedException {
+		String statusOnusPostingServer = OnusPostingServerstatus.getText();
+		if (statusOnusPostingServer.equals("Inactive")) {
+			OnusPostingServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkH2HFileServerRouter1();
+			checkOnusPostingServer1();
 		} else {
-			log.info("H2HFileServerRouter is already running");
+			log.info("OnusPostingServer is already running");
 		}
 	}
 
-	public void checkH2HFileServerRouter1() {
-		String statusH2HFileServerRouter = H2HFileServerRouterstatus.getText();
-		if (statusH2HFileServerRouter.equals("Active")) {
-			log.info("H2HFileServerRouter is started");
+	public void checkOnusPostingServer1() {
+		String statusOnusPostingServer = OnusPostingServerstatus.getText();
+		if (statusOnusPostingServer.equals("Active")) {
+			log.info("OnusPostingServer is started");
 		} else {
-			log.error("H2HFileServerRouter is failed to start");
+			log.error("OnusPostingServer is failed to start");
 		}
 	}
 
-	//---------Check MandateRepresentServer Status----------//
-	public void checkMandateRepresentServer() throws InterruptedException {
-		String statusMandateRepresentServer = MandateRepresentServerstatus.getText();
-		if (statusMandateRepresentServer.equals("Inactive")) {
-			MandateRepresentServercheckbox.click();
+	//---------Check NeftPaymentProcessServer Status----------//
+	public void checkNeftPaymentProcessServer() throws InterruptedException {
+		String statusNeftPaymentProcessServer = NeftPaymentProcessServerstatus.getText();
+		if (statusNeftPaymentProcessServer.equals("Inactive")) {
+			NeftPaymentProcessServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkMandateRepresentServer1();
+			checkNeftPaymentProcessServer1();
 		} else {
-			log.info("MandateRepresentServer is already running");
+			log.info("NeftPaymentProcessServer is already running");
 		}
 	}
 
-	public void checkMandateRepresentServer1() {
-		String statusMandateRepresentServer = MandateRepresentServerstatus.getText();
-		if (statusMandateRepresentServer.equals("Active")) {
-			log.info("MandateRepresentServer is started");
+	public void checkNeftPaymentProcessServer1() {
+		String statusNeftPaymentProcessServer = NeftPaymentProcessServerstatus.getText();
+		if (statusNeftPaymentProcessServer.equals("Active")) {
+			log.info("NeftPaymentProcessServer is started");
 		} else {
-			log.error("MandateRepresentServer is failed to start");
+			log.error("NeftPaymentProcessServer is failed to start");
 		}
 	}
 
-	//-----------Check TransactionRepresentServer Status----------//
-	public void checkTransactionRepresentServer() throws InterruptedException {
-		String statusTransactionRepresentServer = TransactionRepresentServerstatus.getText();
-		if (statusTransactionRepresentServer.equals("Inactive")) {
-			TransactionRepresentServercheckbox.click();
+	//-----------Check AchPaymentProcessServer Status----------//
+	public void checkAchPaymentProcessServer() throws InterruptedException {
+		String statusAchPaymentProcessServer = AchPaymentProcessServerstatus.getText();
+		if (statusAchPaymentProcessServer.equals("Inactive")) {
+			AchPaymentProcessServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkTransactionRepresentServer1();
+			checkAchPaymentProcessServer1();
 		} else {
-			log.info("TransactionRepresentServer is already running");
+			log.info("AchPaymentProcessServer is already running");
 		}
 	}
 
-	public void checkTransactionRepresentServer1() {
-		String statusTransactionRepresentServer = TransactionRepresentServerstatus.getText();
-		if (statusTransactionRepresentServer.equals("Active")) {
-			log.info("TransactionRepresentServer is started");
+	public void checkAchPaymentProcessServer1() {
+		String statusAchPaymentProcessServer = AchPaymentProcessServerstatus.getText();
+		if (statusAchPaymentProcessServer.equals("Active")) {
+			log.info("AchPaymentProcessServer is started");
 		} else {
-			log.error("TransactionRepresentServer is failed to start");
+			log.error("AchPaymentProcessServer is failed to start");
 		}
 	}
 
-	//---------Check GpsFileProgressServer Status----------//
-	public void checkGpsFileProgressServer() throws InterruptedException {
-		String statusGpsFileProgressServer = GpsFileProgressServerstatus.getText();
-		if (statusGpsFileProgressServer.equals("Inactive")) {
-			GpsFileProgressServercheckbox.click();
+	//---------Check AchOutputServer Status----------//
+	public void checkAchOutputServer() throws InterruptedException {
+		String statusAchOutputServer = AchOutputServerstatus.getText();
+		if (statusAchOutputServer.equals("Inactive")) {
+			AchOutputServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkGpsFileProgressServer1();
+			checkAchOutputServer1();
 		} else {
-			log.info("GpsFileProgressServer is already running");
+			log.info("AchOutputServer is already running");
 		}
 	}
 
-	public void checkGpsFileProgressServer1() {
-		String statusGpsFileProgressServer = GpsFileProgressServerstatus.getText();
-		if (statusGpsFileProgressServer.equals("Active")) {
-			log.info("GpsFileProgressServer is started");
+	public void checkAchOutputServer1() {
+		String statusAchOutputServer = AchOutputServerstatus.getText();
+		if (statusAchOutputServer.equals("Active")) {
+			log.info("AchOutputServer is started");
 		} else {
-			log.error("GpsFileProgressServer is failed to start");
+			log.error("AchOutputServer is failed to start");
 		}
 	}
 
-	//-----------Check GpsPaymentProgressServer Status----------//
-	public void checkGpsPaymentProgressServer() throws InterruptedException {
-		String statusGpsPaymentProgressServer = GpsPaymentProgressServerstatus.getText();
-		if (statusGpsPaymentProgressServer.equals("Inactive")) {
-			GpsPaymentProgressServercheckbox.click();
+	//-----------Check AchResponseReaderServer Status----------//
+	public void checkAchResponseReaderServer() throws InterruptedException {
+		String statusAchResponseReaderServer = AchResponseReaderServerstatus.getText();
+		if (statusAchResponseReaderServer.equals("Inactive")) {
+			AchResponseReaderServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkGpsPaymentProgressServer1();
+			checkAchResponseReaderServer1();
 		} else {
-			log.info("GpsPaymentProgressServer is already running");
+			log.info("AchResponseReaderServer is already running");
 		}
 	}
 
-	public void checkGpsPaymentProgressServer1() {
-		String statusGpsPaymentProgressServer = GpsPaymentProgressServerstatus.getText();
-		if (statusGpsPaymentProgressServer.equals("Active")) {
-			log.info("GpsPaymentProgressServer is started");
+	public void checkAchResponseReaderServer1() {
+		String statusAchResponseReaderServer = AchResponseReaderServerstatus.getText();
+		if (statusAchResponseReaderServer.equals("Active")) {
+			log.info("AchResponseReaderServer is started");
 		} else {
-			log.error("GpsPaymentProgressServer is failed to start");
+			log.error("AchResponseReaderServer is failed to start");
 		}
 	}
 
-	//----------Check ChargePostingServer Status----------//
-	public void checkChargePostingServer() throws InterruptedException {
-		String statusChargePostingServer = ChargePostingServerstatus.getText();
-		if (statusChargePostingServer.equals("Inactive")) {
-			ChargePostingServercheckbox.click();
+	//----------Check AchResponseProcessServer Status----------//
+	public void checkAchResponseProcessServer() throws InterruptedException {
+		String statusAchResponseProcessServer = AchResponseProcessServerstatus.getText();
+		if (statusAchResponseProcessServer.equals("Inactive")) {
+			AchResponseProcessServercheckbox.click();
 			switchResourceButton.click();
 			returnBtnStatus();
-			checkChargePostingServer1();
+			checkAchResponseProcessServer1();
 		} else {
-			log.info("ChargePostingServer is already running");
+			log.info("AchResponseProcessServer is already running");
 		}
 	}
 
-	public void checkChargePostingServer1() {
-		String statusChargePostingServer = ChargePostingServerstatus.getText();
-		if (statusChargePostingServer.equals("Active")) {
-			log.info("ChargePostingServer is started");
+	public void checkAchResponseProcessServer1() {
+		String statusAchResponseProcessServer = AchResponseProcessServerstatus.getText();
+		if (statusAchResponseProcessServer.equals("Active")) {
+			log.info("AchResponseProcessServer is started");
 		} else {
-			log.error("ChargePostingServer is failed to start");
+			log.error("AchResponseProcessServer is failed to start");
 		}
 	}
 
