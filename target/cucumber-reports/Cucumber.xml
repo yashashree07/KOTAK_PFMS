@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="71.79711">
+<testcase classname="To Test The Functionality Of User Menu" name="To Approve the User" time="44.201248">
+<system-out><![CDATA[Given User goes to Administration and then User Approve menu................passed
+Then User goes to Approve screen and approves the record using "User_ModifyRepairApproveView".passed
+]]></system-out>
+</testcase>
+<testcase classname="To Test The Functionality Of User Menu" name="To View the User" time="27.595862">
+<system-out><![CDATA[Given User goes to Administration and then User List menu...................passed
+Then User goes to List screen and views the record using "User_ModifyRepairApproveView".passed
+]]></system-out>
+</testcase>
+</testsuite>

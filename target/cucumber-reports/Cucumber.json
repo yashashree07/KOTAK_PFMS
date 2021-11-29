@@ -1,0 +1,196 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-11-29T05:14:24.131Z",
+        "before": [
+          {
+            "result": {
+              "duration": 52348000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 11189088100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.launchBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 48,
+        "name": "To Approve the User",
+        "description": "",
+        "id": "to-test-the-functionality-of-user-menu;to-approve-the-user;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 151100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 22932290500,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "User goes to Administration and then User Approve menu",
+            "match": {
+              "location": "UserStepDefination.user_goes_to_Administration_and_then_User_Approve_menu()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9891208000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "User goes to Approve screen and approves the record using \"User_ModifyRepairApproveView\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User_ModifyRepairApproveView\"",
+                  "offset": 58
+                }
+              ],
+              "location": "UserStepDefination.user_goes_to_Approve_screen_and_approves_the_record_using(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Version1.0"
+          },
+          {
+            "name": "@Regression_Pack_User_Menu"
+          },
+          {
+            "name": "@TC01_05_Approve_User"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-29T05:15:08.333Z",
+        "before": [
+          {
+            "result": {
+              "duration": 318800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.getProperty()"
+            }
+          },
+          {
+            "result": {
+              "duration": 8944279400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.launchBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 57,
+        "name": "To View the User",
+        "description": "",
+        "id": "to-test-the-functionality-of-user-menu;to-view-the-user;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 285900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.quitBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6685328500,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "User goes to Administration and then User List menu",
+            "match": {
+              "location": "UserStepDefination.user_goes_to_Administration_and_then_User_List_menu()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11956431200,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "User goes to List screen and views the record using \"User_ModifyRepairApproveView\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User_ModifyRepairApproveView\"",
+                  "offset": 52
+                }
+              ],
+              "location": "UserStepDefination.user_goes_to_List_screen_and_views_the_record_using(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Version1.0"
+          },
+          {
+            "name": "@Regression_Pack_User_Menu"
+          },
+          {
+            "name": "@TC01_06_View_User"
+          }
+        ]
+      }
+    ],
+    "name": "To Test The Functionality Of User Menu",
+    "description": "",
+    "id": "to-test-the-functionality-of-user-menu",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/setupFeatures/TC-User.feature",
+    "tags": [
+      {
+        "name": "@Version1.0",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Regression_Pack_User_Menu",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 13
+        }
+      }
+    ]
+  }
+]
