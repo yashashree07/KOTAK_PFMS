@@ -18,6 +18,14 @@ import COM.KOTAKPFMS.QA.UTIL.FileReadUtils;
 
 public class ProfilePage {
 
+	/**
+	 * @Author -- Yashashree Suryawanshi
+	 * @version 1.0
+	 * @since 26-11-2021
+	 * 
+	 * <h2>Class Description : Class Involving different methods related to Administration->Profile Menu</h2>
+	 **/
+
 	List<Map<String, String>> test_Data;
 	ElementUtil elementUtil;
 	FileReadUtils fileReader;

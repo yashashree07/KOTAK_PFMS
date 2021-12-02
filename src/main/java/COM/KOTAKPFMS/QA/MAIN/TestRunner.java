@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 
 @CucumberOptions( 
-		features={"src/main/resources/setupFeatures/TC-User.feature"},
+		features={"src/main/resources/setupFeatures/TC-Group.feature"},
 		glue= {"StepDefinition","AppHooks"}
 		,monochrome=true
 		,dryRun=false	
