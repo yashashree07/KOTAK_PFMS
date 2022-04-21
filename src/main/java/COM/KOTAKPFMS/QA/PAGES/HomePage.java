@@ -110,25 +110,25 @@ public class HomePage {
 	@FindBy(xpath = "//a[contains(text(),'Group')]")
 	WebElement groupMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'List')]")
+	@FindBy(xpath = "//*[@id=\"1l2l3l1\"]/a")
 	WebElement groupList;
 
-	@FindBy(xpath = "//a[contains(text(),'Add')]")
+	@FindBy(xpath = "//*[@id=\"1l2l3l2\"]/a")
 	WebElement groupAdd;
 
-	@FindBy(xpath = "//a[contains(text(),'Modify')]")
+	@FindBy(xpath = "//*[@id=\"1l2l3l3\"]/a")
 	WebElement groupModify;
 
-	@FindBy(xpath = "//a[contains(text(),'Approve')]")
+	@FindBy(xpath = "//*[@id=\"1l2l3l4\"]/a")
 	WebElement groupApprove;
 
-	@FindBy(xpath = "//a[contains(text(),'Block')]")
+	@FindBy(xpath = "//*[@id=\"1l2l3l5\"]/a")
 	WebElement groupBlock;
 
-	@FindBy(xpath = "//a[contains(text(),'Unblock')]")
+	@FindBy(xpath = "//*[@id=\"1l2l3l6\"]/a")
 	WebElement groupUnblock;
 
-	@FindBy(xpath = "//a[contains(text(),'Remove')]")
+	@FindBy(xpath = "//*[@id=\"1l2l3l7\"]/a")
 	WebElement groupRemove;
 
 	// WebElements for Profile Menu
@@ -150,6 +150,29 @@ public class HomePage {
 	@FindBy(xpath = "//*[@id=\"1l2l4l5\"]/a")
 	WebElement profileRemove;
 
+	// WebElements for GPS Menu
+	@FindBy(xpath = "//a[normalize-space()='GPS']")
+	WebElement gpsLink;
+
+	@FindBy(xpath = "//*[@id=\"1l4\"]/a")
+	WebElement approvegpsLink;
+
+	@FindBy(xpath = "//a[normalize-space()='Static Data']")
+	WebElement staticDataLink;
+
+	@FindBy(xpath = "//a[normalize-space()='Calendar']")
+	WebElement calendarLink;
+
+	@FindBy(xpath = "//a[@title='View calendars']")
+	WebElement calendarViewLink;
+	@FindBy(xpath = "//a[normalize-space()='Create']")
+	WebElement calendarCreateLink;
+
+	@FindBy(xpath = "//a[@title='Modify/Repair calendar']")
+	WebElement ModifyCalendarLink;
+
+	@FindBy(xpath = "//a[@title='Approve calendar changes']")
+	WebElement ApproveLink;
 	//HomePage Webelements
 
 	@FindBy(xpath="//span[@class='glyphicon glyphicon-log-out']")
@@ -328,73 +351,89 @@ public class HomePage {
 	// ----------------------Group Menu Methods--------------------------------//
 
 	// ----------Method to reach to Group Add Link--------//
-	/*public GroupPage clickonAddGroupLink() throws InterruptedException {
+	public GroupPage AddGroupMenu() throws InterruptedException {
 		elementUtil.clickElement(administrationMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupAdd);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.handlewin(driver);
 		return new GroupPage(driver);
-	}
+	}//end of AddGroupMenu function
 
 	// ----------Method to reach to Group Approve Link--------//
-	public GroupPage clickonApproveGroupLink() throws InterruptedException {
+	public GroupPage ApproveGroupMenu() throws InterruptedException {
 		elementUtil.GoToFrame("toc");
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(administrationMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupApprove);
 		elementUtil.handlewin(driver);
-		elementUtil.clickElement(groupOk);
 		return new GroupPage(driver);
-	}
+	}//end of ApproveGroupMenu function
 
 	// ----------Method to reach to Group Modify Link--------//
-	public GroupPage clickonModifyGroupLink(String name) throws InterruptedException {
+	public GroupPage ModifyGroupMenu() throws InterruptedException {
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(administrationMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupModify);
 		elementUtil.handlewin(driver);
-		elementUtil.enterText(grpModifyTextField, name);
-		elementUtil.clickElement(btnModifyOk);
 		return new GroupPage(driver);
-	}
+	}//end 
 
 	// ----------Method to reach to Group Remove Link--------//
-	public GroupPage clickonRemoveGroupLink(String name) throws InterruptedException {
+	public GroupPage RemoveGroupMenu() throws InterruptedException {
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(administrationMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupRemove);
 		elementUtil.handlewin(driver);
-		elementUtil.enterText(groupTextfield, name);
-		elementUtil.clickElement(btnGroupOk);
 		return new GroupPage(driver);
-	}
+	}//end of RemoveGroupMenu function
 
 	// ----------Method to reach to Group List Link--------//
-	public GroupPage clickonListGroupLink(String name, String WithStatus) throws InterruptedException {
+	public GroupPage GroupListMenu() throws InterruptedException {
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(administrationMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupList);
 		elementUtil.handlewin(driver);
 		return new GroupPage(driver);
-	}
+	}//end of GroupListMenu function
 
 	// ----------Method to reach to Group Block Link--------//
-	public GroupPage clickonBlockGroupLink(String name) throws InterruptedException {
+	public GroupPage BlockGroupMenu() throws InterruptedException {
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(administrationMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupBlock);
 		elementUtil.handlewin(driver);
 		return new GroupPage(driver);
-	}
+	}//end of BlockGroupMenu function
 
 	// ----------Method to reach to Group Unblock Link--------//
-	public GroupPage clickonUnblockGroupLink(String name) throws InterruptedException {
+	public GroupPage UnblockGroupMenu() throws InterruptedException {
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(administrationMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupMenu);
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(groupUnblock);
 		elementUtil.handlewin(driver);
 		return new GroupPage(driver);
-	}*/
+	}//end of UnblockGroupMenu function 
 
 	// ----------Method to reach to DB Load Link--------//
 	/*public DBLoadPage clickonStaticDataDBLoadsLink() throws InterruptedException {
@@ -494,6 +533,63 @@ public class HomePage {
 		return new HomePage(driver);
 	}
 
+	// calendar
+		public CalendarPage clickonCalendarViewLink() throws InterruptedException {
+			elementUtil.clickElement(gpsLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(staticDataLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(calendarLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(calendarViewLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.handlewin(driver);
+			return new CalendarPage(driver);
+		}
+
+		public CalendarPage clickonCalendarCreateLink() throws InterruptedException {
+			elementUtil.clickElement(gpsLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(staticDataLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(calendarLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(calendarCreateLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.handlewin(driver);
+			return new CalendarPage(driver);
+		}
+
+		public CalendarPage clickonCalendarModifyLink() throws InterruptedException {
+			elementUtil.clickElement(gpsLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(staticDataLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(calendarLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(ModifyCalendarLink);
+			elementUtil.SHORT_TIMEOUT();
+			// elementUtil.SHORT_TIMEOUT();
+			elementUtil.handlewin(driver);
+			return new CalendarPage(driver);
+		}
+
+		public CalendarPage clickonCalendarApproveLink() throws InterruptedException {
+			elementUtil.GoToFrame("toc");
+			elementUtil.clickElement(gpsLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(staticDataLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(calendarLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.clickElement(ApproveLink);
+			elementUtil.SHORT_TIMEOUT();
+			elementUtil.handlewin(driver);
+			return new CalendarPage(driver);
+		}
+
+
 	public HomePage closeApplicationMenu() throws InterruptedException {
 		elementUtil.GoToFrame("toc");
 		elementUtil.clickElement(applicationLink);
@@ -503,6 +599,7 @@ public class HomePage {
 	//-------------------------Method For Logout Operation----------------------------------
 	//Method to perform logout operation
 	public void LogOut() throws InterruptedException {
+		elementUtil.SHORT_TIMEOUT();
 		elementUtil.GoToFrame("app");
 		elementUtil.SHORT_TIMEOUT();
 		elementUtil.clickElement(mainPageLogOutButton);

@@ -24,7 +24,6 @@ public class FileReadUtils {
 
 	// constructor of FileReadUtils Page
 	public FileReadUtils(WebDriver driver) {
-		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}

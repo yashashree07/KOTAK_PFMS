@@ -17,36 +17,39 @@
 		<cucumber.version>6.9.0</cucumber.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<maven.surefire.version>2.22.2</maven.surefire.version>
-	</properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+</properties>
 
 	<dependencies>
-				<!-- Dependency For Selenium -->
+		<!-- Dependency For Selenium -->
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.0.0-alpha-4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>gherkin</artifactId>
 			<version>2.7.3</version>
 		</dependency>
-		
-		
+
+
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>4.2.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-math</artifactId>
 			<version>2.2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java> -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -54,7 +57,7 @@
 			<version>4.8.0</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -69,7 +72,7 @@
 			<version>4.8.0</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -99,8 +102,8 @@
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>4.1.0</version>
 		</dependency>
-		
-		
+
+
 		<!-- Dependency For Report Generation -->
 		<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
 		<dependency>
@@ -108,7 +111,7 @@
 			<artifactId>cucumber-reporting</artifactId>
 			<version>5.3.1</version>
 		</dependency>
-		
+
 		<!-- Dependency For Logs Generation -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -121,25 +124,31 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.0.pr2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports-cucumber4-adapter</artifactId>
 			<version>1.0.8</version>
 		</dependency>
-		
-			<dependency>
+
+		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>4.0.9</version>
 		</dependency>
-		
+
+		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extent-pdf-report -->
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber6-adapter</artifactId>
-			<version>2.6.0</version>
+			<version>2.5.0</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!-- Dependency For Logs Generation -->
+		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j</artifactId> 
+			<version>2.17.1</version> <type>pom</type> </dependency> -->
 
 	</dependencies>
 
@@ -159,7 +168,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>COM.KOTAK_PFMS.QA.MAIN.TestRunner</mainClass>
+									<mainClass>COM.KOTAKPFMS.QA.MAIN.TestRunner</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>

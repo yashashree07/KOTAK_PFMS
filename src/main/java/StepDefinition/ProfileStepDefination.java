@@ -53,7 +53,6 @@ public class ProfileStepDefination {
 
 		homePage=hooks.launchBrowser1();
 		elementUtil.SHORT_TIMEOUT();
-		elementUtil.SHORT_TIMEOUT();
 		profilePage=homePage.ProfileApproveMenu();
 	}//end
 

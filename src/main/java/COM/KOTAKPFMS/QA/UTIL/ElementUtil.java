@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import COM.KOTAKPFMS.QA.FACTORY.DriverFactory;
@@ -30,7 +31,7 @@ public class ElementUtil {
 
 	// Enter into TextField
 	public void enterText(WebElement element, String Text) {
-//		System.out.println("Text Entered");
+		//		System.out.println("Text Entered");
 		element.sendKeys(Text);
 	}
 
@@ -108,7 +109,7 @@ public class ElementUtil {
 			child = (String) i1.next();
 			driver.switchTo().window(child);
 		}
-//		 driver.switchTo().window(menuWindow); // switch back to parent window
+		//		 driver.switchTo().window(menuWindow); // switch back to parent window
 
 	}
 
@@ -116,23 +117,23 @@ public class ElementUtil {
 		String childWindow = driver.getWindowHandle();
 		Set<String> pops=driver.getWindowHandles();
 		pops.remove(childWindow);
-    {
-    Iterator<String> it =pops.iterator();
-    while (it.hasNext()) {
-        String menuWindow=it.next().toString();
-        if(!menuWindow.contains(childWindow))
-        {
-        WebDriver driver1 = driver;
-        driver1.close();
-        driver.switchTo().window(menuWindow);
-        System.out.println("Pop Up Title: "+ driver.switchTo().window(menuWindow).getTitle());
-       
-        }
-    }
-    }
-//    driver.switchTo().window(parent);
-	return driver;
-}
+		{
+			Iterator<String> it =pops.iterator();
+			while (it.hasNext()) {
+				String menuWindow=it.next().toString();
+				if(!menuWindow.contains(childWindow))
+				{
+					WebDriver driver1 = driver;
+					driver1.close();
+					driver.switchTo().window(menuWindow);
+					System.out.println("Pop Up Title: "+ driver.switchTo().window(menuWindow).getTitle());
+
+				}
+			}
+		}
+		//    driver.switchTo().window(parent);
+		return driver;
+	}
 
 
 	// Accepting the Alert Window
@@ -187,7 +188,25 @@ public class ElementUtil {
 	// Getting value from field
 	public String getAttribute(WebElement element) {
 		return element.getAttribute("value");
-	}
+	}//end
+
+	//checking CheckBox Selection And Performing Action 
+	public void CheckBoxSelectAndDeslection(WebElement element, String checkbox) {
+		if(element.isSelected()==true && checkbox.equals("DeSelect"))
+		{
+			//System.out.println("in select");
+			clickElement(element);
+		}//end 
+		else if(element.isSelected()==false && checkbox.equals("Select"))
+		{
+			//System.out.println("in deslect");
+			clickElement(element);
+		}//end
+		else
+		{
+			//System.out.println("No Operation Performed");
+		}//end
+	}//end of CheckBoxSelectAndDeslection function
 
 	// To Select checkbox
 	public void isElementSelected(WebElement element, String checkbox) {
@@ -200,39 +219,107 @@ public class ElementUtil {
 			}
 		}
 	}
-	
-	//Method to select element by visible text
-		public void SelectElementByVisibleText(WebElement Element,String VisibleText)
-		{
-			Element.click();
-			Select s=new Select(Element);
-			s.selectByVisibleText(VisibleText);
-		}//end of SelectElementByVisibleText function
-		
-		//Method Specific to Customer->Menu(Selecting checkboxes)
-		public boolean selectCheckBoxes(String[] checkBoxNo) throws InterruptedException
-		{
-			boolean flag=false;
-			List <WebElement> AllSchemeFormatMapping_Checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']")) ;
 
-			for (String string : checkBoxNo) {
-				int recordNo=Integer.parseInt(string);
-				for(int i=0;i<AllSchemeFormatMapping_Checkboxes.size();i++)
+	//Method to select element by visible text
+	public void SelectElementByVisibleText(WebElement Element,String VisibleText)
+	{
+		Element.click();
+		Select s=new Select(Element);
+		s.selectByVisibleText(VisibleText);
+	}//end of SelectElementByVisibleText function
+
+	//Method Specific to Customer->Menu(Selecting checkboxes)
+	public boolean selectCheckBoxes(String[] checkBoxNo) throws InterruptedException
+	{
+		boolean flag=false;
+		List <WebElement> AllSchemeFormatMapping_Checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']")) ;
+
+		for (String string : checkBoxNo) {
+			int recordNo=Integer.parseInt(string);
+			for(int i=0;i<AllSchemeFormatMapping_Checkboxes.size();i++)
+			{
+
+				if(i==recordNo)
 				{
-					
-					if(i==recordNo)
-					{
-						SHORT_TIMEOUT();
-						AllSchemeFormatMapping_Checkboxes.get(recordNo).click();
-						flag=true;
-					}
-					else
-					{
-						//System.out.println("in else");
-					}
-				}//end of for
+					SHORT_TIMEOUT();
+					AllSchemeFormatMapping_Checkboxes.get(recordNo).click();
+					flag=true;
+				}
+				else
+				{
+					//System.out.println("in else");
+				}
+			}//end of for
+		}
+		return flag;
+	}//end of selectCheckBoxes function
+
+	//Method To check String is per proper expected format
+	public boolean checkStringFormat(String field) throws InterruptedException
+	{
+		boolean stringIsProperFlag=false;
+		if(field.matches("[a-zA-Z0-9]*"))
+		{
+			stringIsProperFlag=true;
+		}//end of if
+
+		return stringIsProperFlag;
+	}//end of checkStringFormat function
+
+	//Method To check if value if IFSCCode is in proper expected format
+	public boolean checkIFSCFormat(String ifscCode) throws InterruptedException
+	{
+		boolean ifscCodeProperFlag=false;
+		if(ifscCode.matches("^[A-Z]{4}0[A-Z0-9]{6}$"))
+		{
+			ifscCodeProperFlag=true;
+		}//end of if
+
+		return ifscCodeProperFlag;
+	}//end of checkIFSCFormat function
+
+	public boolean checkElementVisibility() throws InterruptedException
+	{
+		boolean elementPresentFlag=false;
+		List<WebElement> dynamicElement = driver.findElements(By.xpath("//*[@id=\"pageBody\"]/div/div/div/form[3]/button"));
+		if(dynamicElement.size() != 0){
+			//If list size is non-zero, element is present
+			System.out.println("Element present");
+			elementPresentFlag=true;
+
+		}
+		else{
+			//Else if size is 0, then element is not present
+			System.out.println("Element not present");
+			elementPresentFlag=false;
+		}
+		return elementPresentFlag;
+
+	}
+
+
+	// To Select checkbox
+	public void isElementCheckBoxSelected(WebElement element, String Checkbox) {
+		if (Checkbox.equals("Select")) {
+			if(element.isSelected() == true) {
+				//					System.out.println("Checkbox is alreday selected");
+			}else {
+				element.click();
+				//					System.out.println("Checkbox is selected");
 			}
-			return flag;
-		}//end of selectCheckBoxes function
+		} else if (Checkbox.equals("DeSelect")){
+			if (element.isSelected() == true) {
+				element.click();
+				//					System.out.println("Checkbox is deselected");
+			}else {
+				//					System.out.println("Checkbox is already deselected");
+			}
+		}else {
+			//				log.info("For "+Checkbox+" Checkbox - No operation is specified in Excel sheet");
+		}
+	}
+
+
+
 
 }

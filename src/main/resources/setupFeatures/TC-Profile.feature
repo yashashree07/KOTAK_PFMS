@@ -65,7 +65,7 @@ Feature: To Test The Functionality Of Profile Menu
       | SheetName                 |
       | Profile_RemoveApproveList |
 
-  @TC01_0_Approve_Profile
+  @TC01_08_Approve_Profile
   Scenario Outline: To Approve the Profile
      Given User goes to Administration and then Profile Approve menu
     Then User goes to Profile Approve screen and approves the record using "<SheetName>"
@@ -74,7 +74,7 @@ Feature: To Test The Functionality Of Profile Menu
       | SheetName                 |
       | Profile_RemoveApproveList |
 
-  @TC01_06_View_Profile
+  @TC01_09_View_Profile
   Scenario Outline: To View the Profile
     Given User goes to Administration and then Profile List menu
     Then User goes to Profile List screen and views the record using "<SheetName>"

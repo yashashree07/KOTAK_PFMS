@@ -119,6 +119,20 @@ public class UserStepDefination {
 	public void user_goes_to_BlockUnblock_screen_and_Block_or_UnBlock_the_record_using(String sheetName) throws InvalidFormatException, InterruptedException, IOException {
 		userPage.userBlockUnblockRecord(sheetName);
 	}//end
+	
+	//------------User Add Invalid Data-------------//
 
+	@Given("User enters invalid details using {string} and clicks on Ok button")
+	public void user_enters_details_invalid_details_using_and_and_clicks_on_ok_button(String SheetName) throws InvalidFormatException, InterruptedException, IOException  {
+		userPage.addUserInvalidData(SheetName);
+	}//end
+	
+	//------------User Modify/Repair Invalid Data------//
+	
+	@Then("User provides invalid record details for Modify\\/Repair operation using {string}")
+	public void user_provides_invalid_record_details_for_Modify_Repair_operation_using(String sheetName) throws InvalidFormatException, InterruptedException, IOException {
+		userPage.modifyUserRecordInvalidData(sheetName);
+	}//end
+	
 
 }

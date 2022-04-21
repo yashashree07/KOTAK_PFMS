@@ -12,11 +12,11 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 
 @CucumberOptions( 
-		features={"src/main/resources/setupFeatures/TC-Group.feature"},
+		features={"src/main/resources/setupFeatures/TC-Calendar.feature"},
 		glue= {"StepDefinition","AppHooks"}
 		,monochrome=true
 		,dryRun=false	
-		//,tags= "@TC01_01_AddProfile"
+		,tags= "@TC_05_05_ApproveCalendar"
 		,plugin = {"pretty", "html:target/cucumber-html-report","json:target/cucumber-reports/Cucumber.json","junit:target/cucumber-reports/Cucumber.xml",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 
@@ -26,7 +26,7 @@ import io.cucumber.junit.CucumberOptions;
 public class TestRunner {
 	public static void main(String[] args) {
 	    System.out.println("in main method");
-	    PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/main/resources/log4j.properties");
+	   // PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/main/resources/log4j.properties");
 	    BasicConfigurator.configure();
 	    CreateCucumberOptions cucumberOptions = new CreateCucumberOptions();
 	    ExtentReportGenerator reportGenerator=new ExtentReportGenerator();
@@ -34,7 +34,6 @@ public class TestRunner {
 		cucumberOptions.loadPropertiesFile();
 		cucumberOptions.setOptions();
 	    System.out.println(TestRunner.class.getName()); 
-	 
 	    junitRunner.run(TestRunner.class);
 	    reportGenerator.generateReport();
 	    System.out.println("end");
